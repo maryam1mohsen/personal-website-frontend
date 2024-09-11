@@ -11,9 +11,17 @@ const create = async (formData) => {
     };
 
     const res = await fetch(BASE_URL, options);
-    return res.json();
+
+    // Handle non-2xx responses as errors
+    if (!res.ok) {
+      const errorData = await res.json();
+      throw new Error(errorData.message || 'Failed to send inquiry');
+    }
+
+    // Return the parsed JSON response
+    return await res.json();
   } catch (error) {
-    console.error("Error sending inquiry:", error);
+    console.error("Error sending inquiry:", error.message);
     throw error;
   }
 };

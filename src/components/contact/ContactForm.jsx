@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import * as contactService from '../../services/contactService';
+import * as contactMeService from '../../services/contactMeService';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const ContactForm = ({ onFormSubmit }) => {
@@ -18,7 +18,7 @@ const ContactForm = ({ onFormSubmit }) => {
 
     const handleSubmitContact = async (formData) => {
         try {
-            const newContact = await contactService.create(formData);
+            const newContact = await contactMeService.create(formData);
             if (!newContact) {
                 throw new Error('Error creating contact inquiry');
             }
