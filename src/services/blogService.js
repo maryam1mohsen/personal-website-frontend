@@ -66,4 +66,22 @@ const remove = async (blogId) => {
   }
 };
 
-export { index, show, create, remove };
+const update = async (blogId, updatedBlog) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${blogId}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedBlog),
+    });
+
+    return res.json();
+  } catch (error) {
+    console.error("Error updating blog:", error);
+    throw error;
+  }
+};
+
+export { index, show, create, remove, update };

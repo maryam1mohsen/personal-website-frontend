@@ -2,12 +2,11 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 
 // Components
 import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
-// import BlogList from './components/blog/BlogList';
-// import BlogDetail from './components/blog/BlogDetail';
-// import BlogCreate from './components/blog/BlogCreate';
-// import BlogEdit from './components/blog/BlogEdit';
-// import BlogDelete from './components/blog/BlogDelete';
+// import Footer from './components/footer/Footer';
+import BlogList from './components/blog/BlogList';
+import BlogDetail from './components/blog/BlogDetail';
+import BlogCreate from './components/blog/BlogCreate';
+import BlogEdit from './components/blog/BlogEdit';
 // import PortfolioList from './components/portfolio/PortfolioList';
 // import PortfolioDetail from './components/portfolio/PortfolioDetail';
 // import PortfolioCreate from './components/portfolio/PortfolioCreate';
@@ -48,12 +47,12 @@ const App = () => {
 
       <main className={isHomePage ? 'main-content home-page' : 'main-content'}>
         <Routes>
-          {/* <Route path="/blogs" element={<BlogList />} />
+          <Route path="/blogs" element={<BlogList />} />
           <Route path="/blogs/:id" element={<BlogDetail />} />
           <Route path="/blogs/create" element={<BlogCreate />} />
-          <Route path="/blogs/edit/:id" element={<BlogEdit />} />
-          <Route path="/blogs/delete/:id" element={<BlogDelete />} />
-          <Route path="/portfolio" element={<PortfolioList />} />
+          <Route path="/blogs/:id/edit" element={<BlogEdit />} />
+          
+          {/* <Route path="/portfolio" element={<PortfolioList />} />
           <Route path="/portfolio/:id" element={<PortfolioDetail />} />
           <Route path="/portfolio/create" element={<PortfolioCreate />} />
           <Route path="/portfolio/edit/:id" element={<PortfolioEdit />} />
@@ -68,7 +67,7 @@ const App = () => {
         </Routes>
       </main>
 
-      <Footer />
+    
     </div>
   );
 };
