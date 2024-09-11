@@ -66,22 +66,24 @@ const remove = async (blogId) => {
   }
 };
 
-const update = async (blogId, updatedBlog) => {
+const update = async (blogId, formData) => {
   try {
-    const res = await fetch(`${BASE_URL}/${blogId}`, {
+    const options = {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(updatedBlog),
-    });
+      body: JSON.stringify(formData),
+    };
 
+    const res = await fetch(`${BASE_URL}/${blogId}`, options);
     return res.json();
   } catch (error) {
     console.error("Error updating blog:", error);
     throw error;
   }
 };
+
 
 export { index, show, create, remove, update };
