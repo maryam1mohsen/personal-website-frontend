@@ -2,12 +2,11 @@ const BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/comments`;
 
 const indexByBlogId = async (blogId) => {
   try {
-    const res = await fetch(`${BASE_URL}/blog/${blogId}`, {
+    const res = await fetch(`${BASE_URL}/${blogId}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     });
-
     return res.json();
   } catch (error) {
     console.error("Error fetching comments for blog:", error);
@@ -26,7 +25,7 @@ const create = async (blogId, formData) => {
       body: JSON.stringify(formData),
     };
 
-    const res = await fetch(`${BASE_URL}/blog/${blogId}`, options);
+    const res = await fetch(`${BASE_URL}/${blogId}`, options);
     return res.json();
   } catch (error) {
     console.error("Error creating comment:", error);
