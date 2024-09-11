@@ -1,24 +1,25 @@
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ isAuthenticated, logout }) => {
+const NavBar = ({ user, handleSignout }) => {
   return (
-    <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        {!isAuthenticated ? (
-          <>
-            <li><Link to="/signin">Sign In</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
-          </>
-        ) : (
-          <>
-            <li><Link to="/profile">Profile</Link></li>
-            <li><button onClick={logout}>Log Out</button></li>
-          </>
-        )}
-      </ul>
-    </nav>
-  );
-};
+    <>
+      { user ? (
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link onClick={handleSignout} to="">Sign Out</Link></li>
+          </ul>
+        </nav>
+      ) : (
+        <nav>
+          <ul>
+            <li><Link to="/sign-in">Sign In</Link></li>
+            <li><Link to="/sign-up">Sign Up</Link></li>
+          </ul>
+        </nav>
+      )}
+    </>
+  )
+}
 
-export default Navbar;
+export default NavBar;
