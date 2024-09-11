@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import * as blogService from '../../services/blogService';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BlogEdit = () => {
   const { id } = useParams(); // Get the ID from URL params

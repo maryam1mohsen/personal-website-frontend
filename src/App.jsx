@@ -15,7 +15,7 @@ import BlogEdit from './components/blog/BlogEdit';
 import SignIn from './components/auth/SignInForm';
 import SignUp from './components/auth/SignUpForm';
 // import ContactMe from './components/contact/ContactMe';
-// import CommentList from './components/comments/CommentList';
+// import CommentForm from './components/comments/CommentForm';
 // import CommentCreate from './components/comments/CommentCreate';
 // import CommentEdit from './components/comments/CommentEdit';
 // import CommentDelete from './components/comments/CommentDelete';
@@ -60,9 +60,9 @@ const App = () => {
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           {/* <Route path="/contactme" element={<ContactMe />} />
-          <Route path="/comments" element={<CommentList />} />
-          <Route path="/comments/create" element={<CommentCreate />} />
-          <Route path="/comments/edit/:id" element={<CommentEdit />} />
+          <Route path="/comments" element={<CommentList />} /> */}
+          {/* <Route path="/comments/create" element={<CommentForm />} /> */}
+          {/* <Route path="/comments/edit/:id" element={<CommentEdit />} />
           <Route path="/comments/delete/:id" element={<CommentDelete />} /> */}
         </Routes>
       </main>

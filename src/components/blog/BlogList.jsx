@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import * as blogService from "../../services/blogService";
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);

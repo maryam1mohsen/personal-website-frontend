@@ -1,6 +1,7 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import * as blogService from "../../services/blogService";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BlogDetail = () => {
   const { id } = useParams();

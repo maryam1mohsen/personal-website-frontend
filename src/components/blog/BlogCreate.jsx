@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as blogService from '../../services/blogService';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BlogCreate = () => {
   const [formData, setFormData] = useState({
