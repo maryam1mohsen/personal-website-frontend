@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './Navbar.css'; // Assuming you have a separate CSS file for styling
 
 const Navbar = ({ user, handleSignout }) => {
   return (
