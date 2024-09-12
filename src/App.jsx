@@ -10,7 +10,7 @@ import BlogEdit from './components/blog/BlogEdit';
 import SignInForm from './components/auth/SignInForm';
 import SignUpForm from './components/auth/SignUpForm';
 import ContactForm from './components/contact/ContactForm';
-// import Portfolio from './components/portfolio/Portfolio';
+import Portfolio from './components/portfolio/Portfolio';
 import MyServices from './components/myservices/myservices';
 import authService from './services/authService';
 
@@ -49,7 +49,7 @@ const App = () => {
           <Route path="/signup" element={<SignUpForm setUser={setUser} />} />
           <Route path="/signin" element={<SignInForm setUser={setUser} />} />
           <Route path="/contactme" element={<ContactForm />} />
-          {/* <Route path="/portfolio" element={<Portfolio />} /> */}
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<MyServices />} />
         </Routes>
       </main>
