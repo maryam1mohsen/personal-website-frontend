@@ -1,0 +1,53 @@
+.header {
+    background-image: url('/public/images/gradient.png');
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .logo {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  .navbar {
+    display: flex;            /* Use flexbox to control layout */
+    justify-content: center;   /* Center navbar content horizontally */
+    align-items: center;       /* Center items vertically */
+    padding: 0;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;            /* Use flexbox to display list items in a row */
+    gap: 20px;                /* Add spacing between navbar items */
+  }
+  
+  .navbar li {
+    list-style: none;
+  }
+  
+  .navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: #f496b8;
+  }
+  
+  /* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
