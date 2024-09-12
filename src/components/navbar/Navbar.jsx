@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Assuming you have a separate CSS file for styling
+import './Navbar.css'; 
 
 const Navbar = ({ user, handleSignout }) => {
   return (
     <header className="header">
-      <img src="/images/logo.png" className="logo" alt="Logo" />
+      <div className="logo-container">
+        <img src="/images/logo.png" className="logo" alt="Logo" />
+      </div>
       <nav className="navbar">
         <ul className="nav-center">
           <li><Link to="/">Home</Link></li>

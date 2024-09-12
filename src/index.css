@@ -1,25 +1,22 @@
-/* General Styles */
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
-  box-sizing: border-box;
-  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  font-family: Glacial Indifference;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-}
-
-
-
-/* Main Content */
-.main-content {
-  flex: 1;
-  padding: 20px; 
-
 }
 
 
@@ -29,13 +26,16 @@ html, body {
   background-color: transparent;
 }
 /* must edit */
-.home-content { 
-  position: absolute;
-  top: 50%;
-  left: 8%;
-  transform: translateY(-50%);
-
+/* Updated Home Content */
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;  /* Aligns home content to the left */
+  padding-left: 8%;         /* Instead of left: 8%, use padding for proper alignment */
+  min-height: 80vh;         /* Ensure it takes up enough space on the screen */
 }
+
 
 /* Other Pages Background */
 .other-page .main-content {
@@ -107,13 +107,8 @@ html, body {
   border-color: #777;
 }
 
-.form-control.success input {
-  border-color: #2ecc71;
-}
 
-.form-control.error input {
-  border-color: #e74c3c;
-}
+
 
 .form-control i {
   visibility: hidden;
@@ -145,8 +140,8 @@ html, body {
 }
 
 form button {
-  background-color: #D66171;
-  border: 2px solid #D66171;
+  background-color: #f496b8;
+  border: 2px solid #f496b8;
   border-radius: 4px;
   color: #fff;
   display: block;
@@ -159,8 +154,8 @@ form button {
 
 form button[type="button"] {
   background-color: #fff;
-  border-color: #D66171;
-  color: #D66171;
+  border-color: #f496b8;
+  color: #f496b8;
   margin-top: 10px;
 }
 
@@ -175,19 +170,11 @@ form button[type="button"]:hover {
 
 .btn:hover {
   background-color: transparent;
-  color: #D66171;
-  border: 2px solid #D66171;
+  color: #f496b8;
+  border: 2px solid #f496b8;
   transition: ease-in;
 }
 
-.link {
-  color: #4f2a2f;
-  text-decoration: none;
-}
-.link:hover {
-font-weight: bold;
-  color: #2f2022;
-}
 
 
 
