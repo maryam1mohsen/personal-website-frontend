@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as contactMeService from '../../services/contactMeService';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import './ContactForm.css'; // Assuming you add the CSS styles to this file
 
 const ContactForm = ({ onFormSubmit }) => {
     const navigate = useNavigate();
@@ -28,7 +28,7 @@ const ContactForm = ({ onFormSubmit }) => {
                 inquiry: ''
             });
 
-            navigate('/thank-you'); // Navigate to a thank you page, for example
+            navigate('/thank-you');
             if (onFormSubmit) onFormSubmit();
         } catch (err) {
             console.log(err);
@@ -41,52 +41,51 @@ const ContactForm = ({ onFormSubmit }) => {
     };
 
     return (
-        <main className="container mt-5">
-            <h1 className="mb-4">Contact Us</h1>
-            <form onSubmit={handleSubmit} className="row g-3">
-                <div className="col-md-6">
-                    <label htmlFor="name-input" className="form-label">Name</label>
+        <main className="content">
+            <section className="contact-form">
+                <h2>Contact Me</h2>
+                <br />
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="name">Your Name:</label>
                     <input
-                        required
                         type="text"
+                        id="name"
                         name="name"
-                        id="name-input"
-                        className="form-control"
                         value={formData.name}
                         onChange={handleChange}
-                    />
-                </div>
-
-                <div className="col-md-6">
-                    <label htmlFor="email-input" className="form-label">Email</label>
-                    <input
                         required
+                    />
+
+                    <label htmlFor="email">Your Email:</label>
+                    <input
                         type="email"
+                        id="email"
                         name="email"
-                        id="email-input"
-                        className="form-control"
                         value={formData.email}
                         onChange={handleChange}
-                    />
-                </div>
-
-                <div className="col-md-12">
-                    <label htmlFor="inquiry-input" className="form-label">Inquiry</label>
-                    <textarea
                         required
+                    />
+
+                    <label htmlFor="inquiry">Your Message:</label>
+                    <textarea
+                        id="inquiry"
                         name="inquiry"
-                        id="inquiry-input"
-                        className="form-control"
                         rows="4"
                         value={formData.inquiry}
                         onChange={handleChange}
+                        required
                     />
-                </div>
 
-                <div className="col-12">
-                    <button type="submit" className="btn btn-primary w-100">Send Inquiry</button>
-                </div>
-            </form>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+
+            <section className="contact-details">
+                <h2>Contact Details</h2>
+                <p>Email: maryamebrahimalaali@gmail.com</p>
+                <p>Phone: +973 32177707</p>
+                <p>Instagram: @maryam.ebrahim</p>
+            </section>
         </main>
     );
 };
