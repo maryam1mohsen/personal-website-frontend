@@ -30,8 +30,6 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;  /* Aligns home content to the left */
-  padding-left: 8%;         /* Instead of left: 8%, use padding for proper alignment */
   min-height: 80vh;         /* Ensure it takes up enough space on the screen */
 }
 

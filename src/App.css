@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,59 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+.main-content {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-me {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.text {
+  flex-basis: calc(50% - 10px);
+}
+
+.text h2 {
+  margin-bottom: 10px;
+}
+
+.image {
+  flex-basis: calc(50% - 10px);
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.software-skills {
+  flex-basis: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+li img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as contactMeService from '../../services/contactMeService';
-import './ContactForm.css'; // Assuming you add the CSS styles to this file
+import './ContactForm.css';
 
 const ContactForm = ({ onFormSubmit }) => {
     const navigate = useNavigate();

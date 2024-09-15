@@ -56,6 +56,32 @@ const Portfolio = () => {
             </a>
           </div>
         </div>
+        <div className="portfolio-item">
+          <img src="images/flwr-adventure.png" alt="Project 5" />
+          <div className="overlay">
+            <a
+              href="https://maryam1mohsen.github.io/flower-adventure/"
+              className="view-button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+        <div className="portfolio-item">
+          <img src="images/jobpro.png" alt="Project 5" />
+          <div className="overlay">
+            <a
+              href="https://maryam1mohsen.github.io/flower-adventure/"
+              className="view-button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
